@@ -26,9 +26,9 @@ class BeerScreen extends StatelessWidget {
       body: SafeArea(
         child: Obx(
           () {
-            final catsList = presenter.beersList.value;
+            final beersList = presenter.beersList.value;
             return ListView.separated(
-              itemCount: catsList.length,
+              itemCount: beersList.length,
               separatorBuilder: (context, index) => const SizedBox(height: 16),
               itemBuilder: (context, index) => Card(
                 elevation: 4,
@@ -41,7 +41,7 @@ class BeerScreen extends StatelessWidget {
                   child: Row(
                     children: [
                       Image.network(
-                        catsList[index].image,
+                        beersList[index].image,
                         fit: BoxFit.cover,
                       ),
                       Expanded(
@@ -55,16 +55,16 @@ class BeerScreen extends StatelessWidget {
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
                               Text(
-                                catsList[index].name,
+                                beersList[index].name,
                                 overflow: TextOverflow.ellipsis,
                                 style: const TextStyle(
                                   fontSize: 18,
                                   fontWeight: FontWeight.bold,
                                 ),
                               ),
-                              Text('Rating: ${catsList[index].rating}'),
+                              Text('Rating: ${beersList[index].rating}'),
                               Text(
-                                catsList[index].description,
+                                beersList[index].description,
                                 overflow: TextOverflow.ellipsis,
                                 maxLines: 5,
                               ),

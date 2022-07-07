@@ -16,14 +16,15 @@ class RemoteFetchBeers extends FetchBeers {
   @override
   Future<List<BeerEntity>> execute() async {
     try {
+      // https://api.punkapi.com/v2/beers
       final response =
           await httpClient.get(url: 'http://demo5168609.mockable.io/cats');
 
-      final catsList = response?['results']
+      final beersList = response?['results']
           .map<BeerEntity>((json) => BeerModel.fromJson(json).toEntity())
           .toList();
 
-      return catsList ?? [];
+      return beersList ?? [];
     } on HttpError catch (error) {
       if (error == HttpError.forbidden || error == HttpError.unauthorized) {
         throw DomainError.invalidCredentials;

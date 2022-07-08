@@ -39,6 +39,13 @@ dependencies:
   firebase_auth: ^3.3.17
   http: ^0.13.4
   get: 4.6.1
+  firebase_core: ^1.19.1
+  flutter_native_splash: ^2.0.1+1
+
+flutter_native_splash:
+  color: "#000000"
+  image: assets/images/fiap-logo.png
+  android_gravity: fill
 
 dev_dependencies:
   flutter_test:

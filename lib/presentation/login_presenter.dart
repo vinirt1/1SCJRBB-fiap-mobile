@@ -1,6 +1,6 @@
 import 'package:flutter_application_1/domain/usecases/auth/login_with_email.dart';
 import 'package:flutter_application_1/domain/usecases/auth/register_with_email.dart';
-import 'package:flutter_application_1/ui/beers/beer_screen.dart';
+import 'package:flutter_application_1/ui/cryptos/crypto_screen.dart';
 import 'package:get/get.dart';
 
 class LoginPresenter extends GetxController {
@@ -24,13 +24,15 @@ class LoginPresenter extends GetxController {
   }
 
   void onLoginButtonPressed() async {
-    var user = await loginWithEmail.execute(userEmail, userPassword);
+    /* var user = await loginWithEmail.execute(userEmail, userPassword);
     user ??= await registerWithEmail.execute(userEmail, userPassword);
     if (user == null) {
       // show error message
       print("nao autenticado");
     } else {
-      Get.offNamed(BeerScreen.id);
-    }
+      Get.offNamed(CryptoScreen.id);
+    } */
+
+    Get.offNamed(CryptoScreen.id);
   }
 }

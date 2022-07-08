@@ -1,21 +1,21 @@
-import 'package:flutter_application_1/domain/entities/beer_entity.dart';
-import 'package:flutter_application_1/domain/usecases/auth/beer/fetch_beers.dart';
+import 'package:flutter_application_1/domain/entities/crypto_entity.dart';
+import 'package:flutter_application_1/domain/usecases/auth/cryptos/fetch_cryptos.dart';
 import 'package:flutter_application_1/domain/utils/domain_error.dart';
 import 'package:get/get.dart';
 
-class BeerPresenter extends GetxController {
-  BeerPresenter({required this.fetchBeers});
+class CryptoPresenter extends GetxController {
+  CryptoPresenter({required this.fetchCrytos});
 
-  final FetchBeers fetchBeers;
+  final FetchCrytos fetchCrytos;
 
-  final beersList = Rx<List<BeerEntity>>([]);
+  final cryptoList = Rx<List<CryptoEntity>>([]);
   final errorMessage = RxString('');
 
   @override
   void onInit() async {
     super.onInit();
     try {
-      beersList.value = await fetchBeers.execute();
+      cryptoList.value = await fetchCrytos.execute();
     } on DomainError catch (error) {
       errorMessage.value = (error == DomainError.invalidCredentials)
           ? 'Credenciais inválidas'

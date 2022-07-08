@@ -22,7 +22,7 @@ class LoginScreen extends StatelessWidget {
                     alignment: Alignment.center,
                     padding: const EdgeInsets.all(10),
                     child: const Text(
-                      'Beers',
+                      'Cryptos List',
                       style: TextStyle(
                           color: Colors.blue,
                           fontWeight: FontWeight.w500,
@@ -46,7 +46,7 @@ class LoginScreen extends StatelessWidget {
                     padding: const EdgeInsets.fromLTRB(10, 10, 10, 0),
                     child: RectangularTextField(
                       onTextChanged: presenter.onUserEmailUpdate,
-                      hint: "Senh",
+                      hint: "Senha",
                       obscureText: true,
                     )),
                 TextButton(
@@ -64,6 +64,19 @@ class LoginScreen extends StatelessWidget {
                       child: const Text('Entrar'),
                       onPressed: presenter.onLoginButtonPressed,
                     )),
+                Row(
+                  children: <Widget>[
+                    const Text('Não tem uma conta?'),
+                    TextButton(
+                      child: const Text(
+                        'Registre-se',
+                        style: TextStyle(fontSize: 20),
+                      ),
+                      onPressed: () {},
+                    )
+                  ],
+                  mainAxisAlignment: MainAxisAlignment.center,
+                ),
               ],
             )),
       ),

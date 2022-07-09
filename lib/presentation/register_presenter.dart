@@ -1,3 +1,4 @@
+import 'package:flutter/material.dart';
 import 'package:flutter_application_1/domain/usecases/auth/login_with_email.dart';
 import 'package:flutter_application_1/domain/usecases/auth/register_with_email.dart';
 import 'package:flutter_application_1/ui/login/login_screen.dart';
@@ -29,16 +30,20 @@ class RegisterPresenter extends GetxController {
   }
 
   void onRegisterButtonPressed() async {
-
-     var user = await loginWithEmail.execute(userEmail, userPassword);
-     user ??= await registerWithEmail.execute(userEmail, userPassword);
-    if (user == null) {
-      // show error message
-      print("nao autenticado");
-    } else {
-      Get.offNamed(LoginScreen.id);
+    if (userPassword != userConfirmPassword) {
+      Get.snackbar("Senhas não conferem",
+          "A senha e a confirmação não são iguais, verifique  digitação"
+        ,backgroundColor: Colors.red);
     }
-
-    Get.offNamed(LoginScreen.id);
+    else {
+      var user = await registerWithEmail.execute(userEmail, userPassword);
+      if (user == null) {
+        Get.snackbar("Não foi possível registrar", ''
+            'Confirme suas informações'
+            , backgroundColor: Colors.red);
+      } else {
+        Get.offNamed(LoginScreen.id);
+      }
+    }
   }
 }

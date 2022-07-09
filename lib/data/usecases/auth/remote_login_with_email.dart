@@ -3,22 +3,22 @@ import 'package:firebase_auth/firebase_auth.dart';
 import '../../../domain/usecases/auth/login_with_email.dart';
 
 class RemoteLoginWithEmail extends LoginWithEmail {
-  /* RemoteLoginWithEmail({
+   RemoteLoginWithEmail({
     required this.firebaseAuth,
   });
 
-  FirebaseAuth firebaseAuth; */
+  FirebaseAuth firebaseAuth;
 
   @override
-  Future<String> execute(String email, String password) async {
+  Future<User?> execute(String email, String password) async {
     try {
-      /* final userCredential = await firebaseAuth.signInWithEmailAndPassword(
+       final userCredential = await firebaseAuth.signInWithEmailAndPassword(
         email: email,
         password: password,
-      ); */
-      return "userCredential.user";
+      );
+      return userCredential.user;
     } catch (error) {
-      return "null";
+      return null;
     }
   }
 }

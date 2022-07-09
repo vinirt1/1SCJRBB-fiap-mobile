@@ -29,14 +29,15 @@ class RegisterPresenter extends GetxController {
   }
 
   void onRegisterButtonPressed() async {
-    /* var user = await loginWithEmail.execute(userEmail, userPassword);
-    user ??= await registerWithEmail.execute(userEmail, userPassword);
+
+     var user = await loginWithEmail.execute(userEmail, userPassword);
+     user ??= await registerWithEmail.execute(userEmail, userPassword);
     if (user == null) {
       // show error message
       print("nao autenticado");
     } else {
       Get.offNamed(LoginScreen.id);
-    } */
+    }
 
     Get.offNamed(LoginScreen.id);
   }

@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "941984849978",
+    "project_id": "fiap-crypto-app",
+    "storage_bucket": "fiap-crypto-app.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:941984849978:android:2fad650b0a0535cf289503",
+        "android_client_info": {
+          "package_name": "com.example.flutter_application_1"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "941984849978-rr5nf6no3qpq7eoopn4fjnkq655ii2ge.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.flutter_application_1",
+            "certificate_hash": "2dd54974b1bc19d82ea0ead4f91c7bbb50a1fe5d"
+          }
+        },
+        {
+          "client_id": "941984849978-tuhcsrjl2nml4o8jfapq750ht7vjj5j2.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCOb3qsL0Jm7I5emPkguWz0tEL4nuei-T4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "941984849978-tuhcsrjl2nml4o8jfapq750ht7vjj5j2.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

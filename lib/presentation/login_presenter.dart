@@ -25,14 +25,14 @@ class LoginPresenter extends GetxController {
   }
 
   void onLoginButtonPressed() async {
-    /* var user = await loginWithEmail.execute(userEmail, userPassword);
+     var user = await loginWithEmail.execute(userEmail, userPassword);
     user ??= await registerWithEmail.execute(userEmail, userPassword);
     if (user == null) {
       // show error message
       print("nao autenticado");
     } else {
       Get.offNamed(CryptoScreen.id);
-    } */
+    }
 
     Get.offNamed(CryptoScreen.id);
   }

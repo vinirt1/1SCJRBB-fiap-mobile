@@ -9,8 +9,8 @@ import 'package:flutter_application_1/ui/register/register_screen.dart';
 import 'package:get/get.dart';
 
 void main() async {
-  /* WidgetsFlutterBinding.ensureInitialized();
-  await Firebase.initializeApp(); */
+   WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp();
   runApp(const MyApp());
 }
 

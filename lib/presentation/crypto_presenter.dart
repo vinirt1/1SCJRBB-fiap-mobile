@@ -1,5 +1,5 @@
 import 'package:flutter_application_1/domain/entities/crypto_entity.dart';
-import 'package:flutter_application_1/domain/usecases/auth/cryptos/fetch_cryptos.dart';
+import 'package:flutter_application_1/domain/usecases/cryptos/fetch_cryptos.dart';
 import 'package:flutter_application_1/domain/utils/domain_error.dart';
 import 'package:get/get.dart';
 

@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_application_1/domain/entities/crypto_entity.dart';
 import 'package:flutter_application_1/presentation/crypto_presenter.dart';
 import 'package:flutter_application_1/ui/cryptos/components/crypto_card.dart';
 import 'package:get/get.dart';

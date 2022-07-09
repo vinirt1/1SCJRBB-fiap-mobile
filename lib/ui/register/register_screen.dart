@@ -1,14 +1,15 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_application_1/presentation/register_presenter.dart';
 import 'package:flutter_application_1/ui/login/components/rectangular_text_field.dart';
 
 import '../../presentation/login_presenter.dart';
 
-class LoginScreen extends StatelessWidget {
-  static const String id = "/login";
+class RegisterScreen extends StatelessWidget {
+  static const String id = "/register";
 
-  const LoginScreen({Key? key, required this.presenter}) : super(key: key);
+  const RegisterScreen({Key? key, required this.presenter}) : super(key: key);
 
-  final LoginPresenter presenter;
+  final RegisterPresenter presenter;
 
   @override
   Widget build(BuildContext context) {
@@ -22,7 +23,7 @@ class LoginScreen extends StatelessWidget {
                     alignment: Alignment.center,
                     padding: const EdgeInsets.all(10),
                     child: const Text(
-                      'Crypto List App',
+                      'Criar Conta',
                       style: TextStyle(
                           color: Colors.blue,
                           fontWeight: FontWeight.w500,
@@ -49,6 +50,13 @@ class LoginScreen extends StatelessWidget {
                       hint: "Senha",
                       obscureText: true,
                     )),
+                Container(
+                    padding: const EdgeInsets.fromLTRB(10, 10, 10, 0),
+                    child: RectangularTextField(
+                      onTextChanged: presenter.onConfirmPasswordUpdate,
+                      hint: "Confirme a senha",
+                      obscureText: true,
+                    )),
                 TextButton(
                   onPressed: () {
                     //forgot password screen
@@ -61,22 +69,9 @@ class LoginScreen extends StatelessWidget {
                     height: 50,
                     padding: const EdgeInsets.fromLTRB(10, 0, 10, 0),
                     child: ElevatedButton(
-                      child: const Text('Entrar'),
-                      onPressed: presenter.onLoginButtonPressed,
+                      child: const Text('Registrar'),
+                      onPressed: presenter.onRegisterButtonPressed,
                     )),
-                Row(
-                  children: <Widget>[
-                    const Text('Não tem uma conta?'),
-                    TextButton(
-                      child: const Text(
-                        'Registre-se',
-                        style: TextStyle(fontSize: 20),
-                      ),
-                      onPressed: presenter.onRegisterLinkPressed,
-                    )
-                  ],
-                  mainAxisAlignment: MainAxisAlignment.center,
-                ),
               ],
             )),
       ),

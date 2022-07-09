@@ -1,11 +1,10 @@
 import 'package:flutter_application_1/domain/usecases/auth/login_with_email.dart';
 import 'package:flutter_application_1/domain/usecases/auth/register_with_email.dart';
-import 'package:flutter_application_1/ui/cryptos/crypto_screen.dart';
-import 'package:flutter_application_1/ui/register/register_screen.dart';
+import 'package:flutter_application_1/ui/login/login_screen.dart';
 import 'package:get/get.dart';
 
-class LoginPresenter extends GetxController {
-  LoginPresenter({
+class RegisterPresenter extends GetxController {
+  RegisterPresenter({
     required this.loginWithEmail,
     required this.registerWithEmail,
   });
@@ -15,6 +14,7 @@ class LoginPresenter extends GetxController {
 
   var userEmail = '';
   var userPassword = '';
+  var userConfirmPassword = '';
 
   void onUserEmailUpdate(String email) {
     userEmail = email;
@@ -24,21 +24,20 @@ class LoginPresenter extends GetxController {
     userPassword = password;
   }
 
-  void onLoginButtonPressed() async {
+  void onConfirmPasswordUpdate(String confirmPassword) {
+    userConfirmPassword = confirmPassword;
+  }
+
+  void onRegisterButtonPressed() async {
     /* var user = await loginWithEmail.execute(userEmail, userPassword);
     user ??= await registerWithEmail.execute(userEmail, userPassword);
     if (user == null) {
       // show error message
       print("nao autenticado");
     } else {
-      Get.offNamed(CryptoScreen.id);
+      Get.offNamed(LoginScreen.id);
     } */
 
-    Get.offNamed(CryptoScreen.id);
-  }
-
-  void onRegisterLinkPressed() async {
-    print("passei");
-    Get.offNamed(RegisterScreen.id);
+    Get.offNamed(LoginScreen.id);
   }
 }

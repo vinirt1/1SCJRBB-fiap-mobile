@@ -1,3 +1,5 @@
+import 'package:firebase_auth/firebase_auth.dart';
+import 'package:flutter/material.dart';
 import 'package:flutter_application_1/domain/usecases/auth/login_with_email.dart';
 import 'package:flutter_application_1/domain/usecases/auth/register_with_email.dart';
 import 'package:flutter_application_1/ui/cryptos/crypto_screen.dart';
@@ -9,6 +11,8 @@ class LoginPresenter extends GetxController {
     required this.loginWithEmail,
     required this.registerWithEmail,
   });
+
+  User? loggedUser;
 
   LoginWithEmail loginWithEmail;
   RegisterWithEmail registerWithEmail;
@@ -24,21 +28,36 @@ class LoginPresenter extends GetxController {
     userPassword = password;
   }
 
+  void getLoggedUser(){
+    loggedUser = FirebaseAuth.instance.currentUser;
+    if(loggedUser == null){
+    //   Get.snackbar("Realize seu login", ''
+    //       'Insira suas credenciais para consultar a lista de cryptos'
+    //       , backgroundColor: Colors.yellow);
+      print("nao tem usuario logado");
+    }
+    else{
+      Get.offNamed(CryptoScreen.id);
+    }
+  }
+
   void onLoginButtonPressed() async {
-     var user = await loginWithEmail.execute(userEmail, userPassword);
-    user ??= await registerWithEmail.execute(userEmail, userPassword);
+    var user = await loginWithEmail.execute(userEmail, userPassword);
     if (user == null) {
-      // show error message
-      print("nao autenticado");
+      Get.snackbar("Não foi possível autenticar", ''
+          'Confirme suas credenciais ou registre-se'
+          , backgroundColor: Colors.red);
     } else {
       Get.offNamed(CryptoScreen.id);
     }
 
-    Get.offNamed(CryptoScreen.id);
+    //Get.offNamed(CryptoScreen.id);
   }
 
   void onRegisterLinkPressed() async {
     print("passei");
     Get.offNamed(RegisterScreen.id);
   }
+
+
 }

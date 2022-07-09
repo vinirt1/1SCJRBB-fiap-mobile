@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/scheduler.dart';
 import 'package:flutter_application_1/ui/login/components/rectangular_text_field.dart';
 
 import '../../presentation/login_presenter.dart';
+import 'after_layout.dart';
 
-class LoginScreen extends StatelessWidget {
+class LoginScreen extends StatelessWidget  {
   static const String id = "/login";
 
   const LoginScreen({Key? key, required this.presenter}) : super(key: key);
@@ -12,6 +14,10 @@ class LoginScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+
+
+
+
     return Scaffold(
       body: SafeArea(
         child: Padding(
@@ -82,4 +88,8 @@ class LoginScreen extends StatelessWidget {
       ),
     );
   }
+
+
 }
+
+

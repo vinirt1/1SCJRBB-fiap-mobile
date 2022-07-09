@@ -16,10 +16,6 @@ class RemoteFetchCrytos extends FetchCrytos {
   @override
   Future<List<CryptoEntity>> execute() async {
     try {
-      // https://api.punkapi.com/v2/beers
-      final response2 =
-          await httpClient.get(url: 'http://demo5168609.mockable.io/cats');
-
       final response =
           await httpClient.get(url: 'https://www.cryptingup.com/api/markets');
 

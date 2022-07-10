@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application_1/domain/entities/crypto_entity.dart';
-import 'package:flutter_application_1/domain/entities/crypto_entity.dart';
-import 'package:flutter_application_1/domain/entities/crypto_entity.dart';
 
 class CryptoCard extends StatelessWidget {
   const CryptoCard({

@@ -2,8 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_application_1/presentation/register_presenter.dart';
 import 'package:flutter_application_1/ui/login/components/rectangular_text_field.dart';
 
-import '../../presentation/login_presenter.dart';
-
 class RegisterScreen extends StatelessWidget {
   static const String id = "/register";
 

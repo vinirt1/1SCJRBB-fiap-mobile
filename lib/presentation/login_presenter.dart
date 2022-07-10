@@ -28,15 +28,14 @@ class LoginPresenter extends GetxController {
     userPassword = password;
   }
 
-  void getLoggedUser(){
+  void getLoggedUser() {
     loggedUser = FirebaseAuth.instance.currentUser;
-    if(loggedUser == null){
-    //   Get.snackbar("Realize seu login", ''
-    //       'Insira suas credenciais para consultar a lista de cryptos'
-    //       , backgroundColor: Colors.yellow);
+    if (loggedUser == null) {
+      //   Get.snackbar("Realize seu login", ''
+      //       'Insira suas credenciais para consultar a lista de cryptos'
+      //       , backgroundColor: Colors.yellow);
       print("nao tem usuario logado");
-    }
-    else{
+    } else {
       Get.offNamed(CryptoScreen.id);
     }
   }
@@ -44,9 +43,11 @@ class LoginPresenter extends GetxController {
   void onLoginButtonPressed() async {
     var user = await loginWithEmail.execute(userEmail, userPassword);
     if (user == null) {
-      Get.snackbar("Não foi possível autenticar", ''
-          'Confirme suas credenciais ou registre-se'
-          , backgroundColor: Colors.red);
+      Get.snackbar(
+          "Não foi possível autenticar",
+          ''
+              'Confirme suas credenciais ou registre-se',
+          backgroundColor: Colors.red);
     } else {
       Get.offNamed(CryptoScreen.id);
     }
@@ -55,9 +56,6 @@ class LoginPresenter extends GetxController {
   }
 
   void onRegisterLinkPressed() async {
-    print("passei");
     Get.offNamed(RegisterScreen.id);
   }
-
-
 }

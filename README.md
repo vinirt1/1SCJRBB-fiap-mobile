@@ -2,7 +2,7 @@
 
 ## Crypto List App
 
-O objetivo desse aplicativo é a entrega final do trabalho da disciplina Mobile Development.
+Aplicativo desenvolvido como projeto final da disciplina Mobile Development do curso MBA Full Stack Developmente, turma 1SCJRBB.
 
 ## Integrantes
 
@@ -13,29 +13,25 @@ O objetivo desse aplicativo é a entrega final do trabalho da disciplina Mobile 
 
 ## Funcionalidades do Projeto
 
-Trata-se de um aplicativo para consulta de valores de criptomoedas. Aplicativo nativo Android.
+Trata-se de um aplicativo para consulta de valores de criptomoedas.
 
-A listagem das criptomoedas vem da api cryptingup, uma api pública que não exige API keys ou qualquer outro tipo de autenticação. 
+A listagem das criptomoedas vem da [API cryptingup](https://www.cryptingup.com/apidoc/#introduction), uma API pública que não exige autenticação. 
 
-A documentação pode ser encontrada no link abaixo:
-
-[Documentação api](https://www.cryptingup.com/apidoc/#introduction)
+A documentação da API pode ser encontrada no link abaixo:
 
 ## Autenticação do app
 
-Possui login por email.
+O APP possui funcionalidade de login via email.
 
-A autenticação foi feita no projeto base android seguindo a documentação do firebase.
-
-[Documentação autenticação firebase para android](https://firebase.google.com/docs/auth/android/password-auth)
+A autenticação foi implementada no projeto base Android utilizando [Firebase](https://firebase.google.com/docs/auth/android/password-auth).
 
 ## Estrutura do projeto
 
-O Projeto é baseado em tree-architecture. 
+O projeto é baseado em tree-architecture. 
 
 Possui uma tela de splash.
 
-Possui tela de login e cadastro separados. Caso o usuário já esteja logado, redireciona para a listagem de criptomoedas.
+Possui tela de login e cadastro separados. Caso o usuário já esteja logado, redireciona diretamente para a listagem de criptomoedas.
 
 ## Abrir e executar o projeto.
 
@@ -45,7 +41,7 @@ Para executar este projeto você precisa:
 
 - Ter o [Flutter](https://flutter.dev/docs/get-started/install) instalado na sua máquina
 - Ter algum editor de códigos ou IDE como o [Android Studio](https://developer.android.com/studio) ou [Intellij Idea](https://www.jetbrains.com/pt-br/idea/download/).
-- Alguns recursos para ajudar seu inicio caso esse seja o seu primeiro projeto Flutter:
+- Alguns recursos para ajudar seu início, caso esse seja o seu primeiro projeto Flutter:
 - [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
 - [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
 - O Flutter possui um comando de linha para verificar se todos os requisitos do sistema foram atendidos. Basta executar na raiz do projeto o seguinte comando: `flutter doctor`

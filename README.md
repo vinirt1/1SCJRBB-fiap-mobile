@@ -37,7 +37,7 @@ Possui uma tela de splash.
 
 Possui tela de login e cadastro separados. Caso o usuário já esteja logado, redireciona para a listagem de criptomoedas.
 
-## Abrir e rodar o projeto.
+## Abrir e executar o projeto.
 
 Esse projeto é baseado na linguagem Flutter.
 
@@ -48,3 +48,6 @@ Para executar este projeto você precisa:
 - Alguns recursos para ajudar seu inicio caso esse seja o seu primeiro projeto Flutter:
 - [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
 - [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
+- O Flutter possui um comando de linha para verificar se todos os requisitos do sistema foram atendidos. Basta executar na raiz do projeto o seguinte comando: `flutter doctor`
+- O ponto de start do projeto é o `lib\main.dart` e para executar o projeto basta executar o comando `flutter run` ou a interface gráfica do seu IDE
+- [Documentação do test-drive](https://docs.flutter.dev/get-started/test-drive)
